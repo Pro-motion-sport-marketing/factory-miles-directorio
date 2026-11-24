@@ -108,6 +108,20 @@ h2,h3{text-wrap:balance}
 .pago.fuerte small{color:#ffd9d9}
 .pago b{display:block;margin-top:4px;font-family:var(--display);font-stretch:120%;font-weight:900;font-size:clamp(28px,3vw,40px);line-height:1}
 .pago span{display:block;margin-top:8px;font-size:15px;color:var(--texto-2)}
+.nota-plat{margin-top:22px;font-size:16px;color:var(--texto-2)}
+.nota-plat::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--rojo);margin-right:10px}
+#s6{padding-top:48px;padding-bottom:56px}
+.inv{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;margin-top:28px;align-items:start}
+.incluye{list-style:none;margin:0;padding:0;columns:1}
+.incluye li{padding:9px 0 9px 26px;border-top:1px solid #e0d4bb;font-size:16px;position:relative;color:#3a332a}
+.incluye li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:2.5px solid var(--rojo);border-bottom:2.5px solid var(--rojo);transform:rotate(-45deg)}
+.claro .pago{background:#fff8ea;border-color:#ddd0b4;color:var(--tinta)}
+.claro .pago small{color:#7a705f}.claro .pago span{color:#5c5346}
+.claro .pago.fuerte{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.claro .pago.fuerte small{color:#ffd9d9}.claro .pago.fuerte span{color:#ffe3e3}
+.pagos{display:grid;gap:14px}
+.extras{margin-top:16px;font-size:14.5px;color:#5c5346;line-height:1.45}
+.extras b{color:var(--tinta)}
 .pago.fuerte span{color:#ffe3e3}
 
 /* ---------- 6 dominio ---------- */
@@ -149,7 +163,7 @@ h2,h3{text-wrap:balance}
   .paso:nth-child(3){padding-left:0;border-left:0}
   .paso{padding-bottom:18px}
   .galeria{grid-template-columns:1fr 1fr}
-  .semaforo,.pasos-dom,.pedidos,.inversion{grid-template-columns:1fr}
+  .semaforo,.pasos-dom,.pedidos,.inversion,.inv{grid-template-columns:1fr}
   .serv{grid-template-columns:1fr 1fr;gap:4px 16px}
   .serv .para{grid-column:1/-1}
   .serv .cuesta{text-align:left}
@@ -204,7 +218,7 @@ h2,h3{text-wrap:balance}
       <div class="cifra"><b>11</b><span>formas de ganar millas</span></div>
     </div>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>2 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>2 / 8</span></div>
 </section>
 
 <!-- 3 · QUÉ CONTIENE -->
@@ -221,7 +235,7 @@ h2,h3{text-wrap:balance}
       <figure class="pantalla"><div class="ventana"><img src="img/admin.jpg" alt="Panel de administración"></div><figcaption><b>Administración</b><span>Aprobar millas, propuestas y canjes; ver todo por área.</span></figcaption></figure>
     </div>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>3 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>3 / 8</span></div>
 </section>
 
 <!-- 4 · ESTADO -->
@@ -243,7 +257,7 @@ h2,h3{text-wrap:balance}
       <div class="col a">
         <h3><i></i>Falta poco</h3>
         <ul>
-          <li>Dominio propio de Factory<small>Un ajuste de 10 minutos (ver diapositiva 6).</small></li>
+          <li>Dominio propio de Factory<small>Un ajuste de 10 minutos (ver diapositiva 7).</small></li>
           <li>Correo para recuperar contraseña<small>Configurar el envío automático de correos.</small></li>
           <li>Fechas de los retos<small>Ensamblaje contra reloj y Carrera de Gallos están listos, sin fecha.</small></li>
         </ul>
@@ -257,14 +271,14 @@ h2,h3{text-wrap:balance}
       </div>
     </div>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>4 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>4 / 8</span></div>
 </section>
 
 <!-- 5 · DÓNDE VIVE -->
 <section class="slide" id="s5" aria-label="Dónde vive y cuánto cuesta">
   <div class="marco">
     <h2 class="titulo">Dónde vive y cuánto cuesta</h2>
-    <p class="bajada">Servicios conocidos y estables, bajo control propio. Pro Motion los administra y desarrolla las actividades del programa cada mes.</p>
+    <p class="bajada">Servicios conocidos y estables, bajo control propio. Ya no depende de un desarrollador externo.</p>
     <div class="servicios">
       <div class="serv"><div class="que">La página web</div><div class="donde">Cloudflare</div><div class="para">Publica la web rápido y seguro desde cualquier lugar.</div><div class="cuesta">Sin costo</div></div>
       <div class="serv"><div class="que">Datos y usuarios</div><div class="donde">Supabase</div><div class="para">Guarda millas, canjes, propuestas y las cuentas de cada persona.</div><div class="cuesta">Incluido<small>Plan Pro, a cargo de Pro Motion</small></div></div>
@@ -272,16 +286,41 @@ h2,h3{text-wrap:balance}
       <div class="serv"><div class="que">Compinche AI</div><div class="donde">Claude</div><div class="para">La inteligencia artificial del asistente. Máximo 40 mensajes por persona al día.</div><div class="cuesta">Incluido<small>US$20 prepago · más de mil mensajes</small></div></div>
       <div class="serv"><div class="que">Dominio</div><div class="donde">Hostinger</div><div class="para">Donde ya está factory.bike. Solo se agrega una dirección nueva.</div><div class="cuesta">Sin costo</div></div>
     </div>
-    <div class="inversion">
-      <div class="pago"><small>Primer mes</small><b>US$500</b><span>Servicio del mes, más el primer mes de Supabase y los US$20 de crédito para Compinche AI.</span></div>
-      <div class="pago fuerte"><small>Desde el segundo mes</small><b>US$450 al mes</b><span>Desarrollo y documentación de 2 actividades al mes. La plataforma va incluida.</span></div>
-    </div>
+    <p class="nota-plat">Todo esto va incluido en la gestión mensual de Pro Motion (siguiente diapositiva).</p>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>5 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>5 / 8</span></div>
 </section>
 
-<!-- 6 · DOMINIO -->
-<section class="slide claro" id="s6" aria-label="Dominio">
+<!-- 6 · INVERSIÓN -->
+<section class="slide claro" id="s6" aria-label="Inversión">
+  <div class="marco">
+    <h2 class="titulo">Inversión mensual</h2>
+    <p class="bajada">Un valor fijo para que Factory Miles esté activo todo el mes, con la plataforma incluida.</p>
+    <div class="inv">
+      <ul class="incluye">
+        <li>Conceptualización y estructuración de 2 actividades al mes</li>
+        <li>Coordinación y gestión para su ejecución</li>
+        <li>Registro de participantes y resultados en la plataforma</li>
+        <li>Uso, mantenimiento y seguimiento de la plataforma web</li>
+        <li>Actualización de millas, actividades y participación</li>
+        <li>Datos de participación y comportamiento del equipo</li>
+        <li>Seguimiento por WhatsApp: inscripciones, dudas y barreras</li>
+        <li>2 videos de lanzamiento al mes presentados por Daniel Espinoza</li>
+      </ul>
+      <div>
+        <div class="pagos">
+          <div class="pago"><small>Primer mes</small><b>US$500</b><span>Incluye el primer mes de la base de datos y US$20 de crédito para Compinche AI.</span></div>
+          <div class="pago fuerte"><small>Desde el segundo mes</small><b>US$450 al mes</b><span>Gestión completa del programa. Valores sin IVA.</span></div>
+        </div>
+        <p class="extras"><b>Solo si Factory lo pide:</b> producción audiovisual externa US$85 por actividad; materiales de activación cotizados aparte y aprobados antes; acompañamiento a ideas de los colaboradores US$20 la hora (la mayoría toma 1 o 2 horas).</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>6 / 8</span></div>
+</section>
+
+<!-- 7 · DOMINIO -->
+<section class="slide claro" id="s7" aria-label="Dominio">
   <img class="st" src="img/banderin.svg" alt="" style="right:5vw;top:8vh;width:110px;transform:rotate(8deg)">
   <div class="marco">
     <h2 class="titulo">De una dirección temporal a una de Factory</h2>
@@ -297,11 +336,11 @@ h2,h3{text-wrap:balance}
     </div>
     <p class="nota-dom">Sin costo adicional. La dirección temporal sigue funcionando mientras tanto.</p>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>6 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>7 / 8</span></div>
 </section>
 
-<!-- 7 · LO QUE NECESITAMOS -->
-<section class="slide" id="s7" aria-label="Lo que necesitamos del directorio">
+<!-- 8 · LO QUE NECESITAMOS -->
+<section class="slide" id="s8" aria-label="Lo que necesitamos del directorio">
   <div class="marco">
     <h2 class="titulo">Lo que necesitamos del directorio</h2>
     <ul class="pedidos">
@@ -316,7 +355,7 @@ h2,h3{text-wrap:balance}
       <span class="firma">Hechos, no discurso.</span>
     </div>
   </div>
-  <div class="pie"><span>Factory Miles · Directorio</span><span>7 / 7</span></div>
+  <div class="pie"><span>Factory Miles · Directorio</span><span>8 / 8</span></div>
 </section>
 
 <script>

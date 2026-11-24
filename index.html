@@ -98,8 +98,17 @@ h2,h3{text-wrap:balance}
 .serv .para{font-size:16px;color:var(--texto-2)}
 .serv .cuesta{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:19px;text-align:right}
 .serv .cuesta small{display:block;font-family:var(--cuerpo);font-stretch:100%;font-weight:500;font-size:13px;color:var(--texto-2)}
-.total{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-top:22px;font-size:16px;color:var(--texto-2)}
-.total b{font-family:var(--display);font-stretch:120%;font-weight:900;font-size:clamp(24px,2.4vw,32px);color:var(--texto)}
+.serv{padding:12px 0}
+#s5{padding-top:48px;padding-bottom:56px}
+#s5 .servicios{margin-top:26px}
+.inversion{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.pago{border-radius:14px;padding:18px 22px;background:var(--carbon);border:1px solid var(--linea)}
+.pago.fuerte{background:var(--rojo);border-color:var(--rojo)}
+.pago small{font-family:var(--cond);font-weight:700;font-size:15px;color:var(--texto-2)}
+.pago.fuerte small{color:#ffd9d9}
+.pago b{display:block;margin-top:4px;font-family:var(--display);font-stretch:120%;font-weight:900;font-size:clamp(28px,3vw,40px);line-height:1}
+.pago span{display:block;margin-top:8px;font-size:15px;color:var(--texto-2)}
+.pago.fuerte span{color:#ffe3e3}
 
 /* ---------- 6 dominio ---------- */
 .dominios{display:grid;grid-template-columns:1fr auto 1fr;gap:22px;align-items:center;margin-top:44px}
@@ -140,7 +149,7 @@ h2,h3{text-wrap:balance}
   .paso:nth-child(3){padding-left:0;border-left:0}
   .paso{padding-bottom:18px}
   .galeria{grid-template-columns:1fr 1fr}
-  .semaforo,.pasos-dom,.pedidos{grid-template-columns:1fr}
+  .semaforo,.pasos-dom,.pedidos,.inversion{grid-template-columns:1fr}
   .serv{grid-template-columns:1fr 1fr;gap:4px 16px}
   .serv .para{grid-column:1/-1}
   .serv .cuesta{text-align:left}
@@ -255,15 +264,18 @@ h2,h3{text-wrap:balance}
 <section class="slide" id="s5" aria-label="Dónde vive y cuánto cuesta">
   <div class="marco">
     <h2 class="titulo">Dónde vive y cuánto cuesta</h2>
-    <p class="bajada">Servicios conocidos y estables. Ya no depende de un desarrollador externo: el código y las cuentas están bajo control propio.</p>
+    <p class="bajada">Servicios conocidos y estables, bajo control propio. Pro Motion los administra y desarrolla las actividades del programa cada mes.</p>
     <div class="servicios">
-      <div class="serv"><div class="que">La página web</div><div class="donde">Cloudflare</div><div class="para">Publica la web rápido y seguro desde cualquier lugar.</div><div class="cuesta">US$0</div></div>
-      <div class="serv"><div class="que">Datos y usuarios</div><div class="donde">Supabase</div><div class="para">Guarda millas, canjes, propuestas y las cuentas de cada persona.</div><div class="cuesta">US$25 / mes<small>Plan Pro compartido, hoy a cargo de Pro Motion</small></div></div>
-      <div class="serv"><div class="que">Ingreso con Google</div><div class="donde">Google Cloud</div><div class="para">Permite entrar con la cuenta de Google en un clic.</div><div class="cuesta">US$0</div></div>
-      <div class="serv"><div class="que">Compinche AI</div><div class="donde">Claude</div><div class="para">La inteligencia artificial del asistente. Máximo 40 mensajes por persona al día.</div><div class="cuesta">US$20 prepago<small>Más de mil mensajes · sin recarga automática</small></div></div>
-      <div class="serv"><div class="que">Dominio</div><div class="donde">Hostinger</div><div class="para">Donde ya está factory.bike. Solo se agrega una dirección nueva.</div><div class="cuesta">US$0</div></div>
+      <div class="serv"><div class="que">La página web</div><div class="donde">Cloudflare</div><div class="para">Publica la web rápido y seguro desde cualquier lugar.</div><div class="cuesta">Sin costo</div></div>
+      <div class="serv"><div class="que">Datos y usuarios</div><div class="donde">Supabase</div><div class="para">Guarda millas, canjes, propuestas y las cuentas de cada persona.</div><div class="cuesta">Incluido<small>Plan Pro, a cargo de Pro Motion</small></div></div>
+      <div class="serv"><div class="que">Ingreso con Google</div><div class="donde">Google Cloud</div><div class="para">Permite entrar con la cuenta de Google en un clic.</div><div class="cuesta">Sin costo</div></div>
+      <div class="serv"><div class="que">Compinche AI</div><div class="donde">Claude</div><div class="para">La inteligencia artificial del asistente. Máximo 40 mensajes por persona al día.</div><div class="cuesta">Incluido<small>US$20 prepago · más de mil mensajes</small></div></div>
+      <div class="serv"><div class="que">Dominio</div><div class="donde">Hostinger</div><div class="para">Donde ya está factory.bike. Solo se agrega una dirección nueva.</div><div class="cuesta">Sin costo</div></div>
     </div>
-    <div class="total"><span>Costo nuevo para Factory hoy</span><b>US$0 al mes</b></div>
+    <div class="inversion">
+      <div class="pago"><small>Primer mes</small><b>US$500</b><span>Servicio del mes, más el primer mes de Supabase y los US$20 de crédito para Compinche AI.</span></div>
+      <div class="pago fuerte"><small>Desde el segundo mes</small><b>US$450 al mes</b><span>Desarrollo y documentación de 2 actividades al mes. La plataforma va incluida.</span></div>
+    </div>
   </div>
   <div class="pie"><span>Factory Miles · Directorio</span><span>5 / 7</span></div>
 </section>
